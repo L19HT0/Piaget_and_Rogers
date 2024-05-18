@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Piaget & Rogers </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="{{ url_for('static', filename='img/favicon.ico') }}" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{{ url_for('static', filename='lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='lib/owlcarousel/assets/owl.theme.default.min.css') }}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid">
+        <div class="row align-items-center bg-light px-lg-5">
+            <div class="col-12 col-md-8">
+                <div class="d-flex justify-content-between">
+                    <div class="bg-primary text-white text-center py-2" style="width: 100px;">Hackathon 2024</div>
+                    <div class="owl-carousel owl-carousel-1 tranding-carousel position-relative d-inline-flex align-items-center ml-3" style="width: calc(100% - 100px); padding-left: 90px;">
+                        
+                        <div class="text-truncate"><a class="text-secondary" href="">Con esfuerzo y perseverancia, ¡puedes alcanzar cualquier sueño que te propongas!</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-right d-none d-md-block">
+                Corn $h1p
+            </div>
+        </div>
+        <div class="row align-items-center py-2 px-lg-5">
+            <div class="col-lg-4">
+                <a href="" class="navbar-brand d-none d-lg-block">
+                    <h1 class="m-0 display-5 text-uppercase"><span class="text-primary">Piaget</span> & Rogers</h1>  
+                </a>
+            </div>
+            <div class="col-lg-8 text-center text-lg-right">
+                <img class="img-fluid" src="{{ url_for('static', filename='img/ads-700x70.jpg') }}" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0 mb-3">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light py-2 py-lg-0 px-lg-5">
+            <a href="" class="navbar-brand d-block d-lg-none">
+                <h1 class="m-0 display-5 text-uppercase"><span class="text-primary">News</span>Room</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
+                <div class="navbar-nav mr-auto py-0">
+                    <a href="{{ url_for('home') }}" class="nav-item nav-link active">Inicio</a>
+                    <a href="{{ url_for('nosotros') }}" class="nav-item nav-link">Nosotros</a>
+                    <a href="{{ url_for('contacto') }}" class="nav-item nav-link">Contacto</a>
+                    <div class="nav-item dropdown">
+                        <div> <h1>Bienvenido, {{ user.name }}!</h1> </div>
+                    </div>
+                </div>
+                <div>
+                    <p><a href="/logout" class="btn btn-logout">Cerrar sesión</a></p>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->   <!-- NOTICIAS HEADER -->
+
+
+    <!-- Top News Slider Start 
+    <div class="container-fluid py-3">
+        <div class="container">
+            <div class="owl-carousel owl-carousel-2 carousel-item-3 position-relative">
+                <div class="d-flex">
+                    <img src="img/news-100x100-1.jpg" style="width: 80px; height: 80px; object-fit: cover;">
+                    <div class="d-flex align-items-center bg-light px-3" style="height: 80px;">
+                        <a class="text-secondary font-weight-semi-bold" href="https://subes.becasbenitojuarez.gob.mx/">Lorem ipsum dolor sit amet consec adipis elit</a>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <img src="img/news-100x100-2.jpg" style="width: 80px; height: 80px; object-fit: cover;">
+                    <div class="d-flex align-items-center bg-light px-3" style="height: 80px;">
+                        <a class="text-secondary font-weight-semi-bold" href="">Lorem ipsum dolor sit amet consec adipis elit</a>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <img src="img/news-100x100-3.jpg" style="width: 80px; height: 80px; object-fit: cover;">
+                    <div class="d-flex align-items-center bg-light px-3" style="height: 80px;">
+                        <a class="text-secondary font-weight-semi-bold" href="">Lorem ipsum dolor sit amet consec adipis elit</a>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <img src="img/news-100x100-4.jpg" style="width: 80px; height: 80px; object-fit: cover;">
+                    <div class="d-flex align-items-center bg-light px-3" style="height: 80px;">
+                        <a class="text-secondary font-weight-semi-bold" href="">Lorem ipsum dolor sit amet consec adipis elit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   Top News Slider End -->
+
+
+    <!-- Main News Slider Start -->
+    <div class="container-fluid py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="owl-carousel owl-carousel-2 carousel-item-1 position-relative mb-3 mb-lg-0">
+                        <div class="position-relative overflow-hidden" style="height: 435px;">
+                            <img class="img-fluid h-100" src="{{ url_for('static', filename='img/news-700x435-1.jpg') }}" style="object-fit: cover;">
+                            <div class="overlay">
+                                <div class="mb-1">
+                                    <a class="text-white" href="">Technology</a>
+                                    <span class="px-2 text-white">/</span>
+                                    <a class="text-white" href="">Sábado, Mayo 18, 2024</a>
+                                </div>
+                                <a class="h2 m-0 text-white font-weight-bold" href="https://www.eleconomista.com.mx/politica/Educacion-en-Mexico-insuficiente-desigual-y-la-calidad-es-dificil-de-medir-20181225-0028.html">Educación en México: insuficiente, desigual y la calidad es difícil de medir</a>
+                            </div>
+                        </div>
+                        <div class="position-relative overflow-hidden" style="height: 435px;">
+                            <img class="img-fluid h-100" src="{{ url_for('static', filename='img/news-700x435-2.jpg') }}" style="object-fit: cover;">
+                            <div class="overlay">
+                                <div class="mb-1">
+                                    <a class="text-white" href="">Technology</a>
+                                    <span class="px-2 text-white">/</span>
+                                    <a class="text-white" href="">Sábado, Mayo 18, 2024</a>
+                                </div>
+                                <a class="h2 m-0 text-white font-weight-bold" href="https://www.swissinfo.ch/spa/menos-del-60-%25-de-alumnos-de-nivel-b%C3%A1sico-en-m%C3%A9xico-concluyen-la-secundaria%2C-alerta-kumon/76472863">Menos del 60 % de alumnos de nivel básico en México concluyen la secundaria</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center justify-content-between bg-light py-2 px-4 mb-3">
+                        <h3 class="m-0">GRADOS</h3>
+                    </div>
+                    <div class="position-relative overflow-hidden mb-3" style="height: 80px;">
+                        <img class="img-fluid w-100 h-100" src="{{ url_for('static', filename='img/cat-500x80-1.jpg') }}" style="object-fit: cover;">
+                        <a href="{{ url_for('static', filename='PRIMARIA.html') }}" class="overlay align-items-center justify-content-center h4 m-0 text-white text-decoration-none">
+                            Primaria
+                        </a>
+                    </div>
+                    <div class="position-relative overflow-hidden mb-3" style="height: 80px;">
+                        <img class="img-fluid w-100 h-100" src="{{ url_for('static', filename='img/cat-500x80-2.jpg') }}" style="object-fit: cover;">
+                        <a href="{{ url_for('static', filename='SECUNDARIA.html') }}" class="overlay align-items-center justify-content-center h4 m-0 text-white text-decoration-none">
+                            Secundaria
+                        </a>
+                    </div>
+                    <div class="position-relative overflow-hidden mb-3" style="height: 80px;">
+                        <img class="img-fluid w-100 h-100" src="{{ url_for('static', filename='img/cat-500x80-3.jpg') }}" style="object-fit: cover;">
+                        <a href="{{ url_for('static', filename='PREPARATORIA.html') }}" class="overlay align-items-center justify-content-center h4 m-0 text-white text-decoration-none">
+                            Preparatoria
+                        </a>
+                    </div>
+                    <div class="position-relative overflow-hidden" style="height: 80px;">
+                        <img class="img-fluid w-100 h-100" src="{{ url_for('static', filename='img/cat-500x80-4.jpg') }}" style="object-fit: cover;">
+                        <a href="{{ url_for('static', filename='UNIVERSIDAD.html') }}" class="overlay align-items-center justify-content-center h4 m-0 text-white text-decoration-none">
+                            Universidad
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main News Slider End -->
+
+
+    <!-- Featured News Slider Start -->
+    <div class="container-fluid py-3">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between bg-light py-2 px-4 mb-3">
+                <h3 class="m-0">Programas</h3>
+                <a class="text-secondary font-weight-medium text-decoration-none" href="#"></a>
+            </div>
+            <div class="owl-carousel owl-carousel-2 carousel-item-4 position-relative">
+                <div class="position-relative overflow-hidden" style="height: 300px;">
+                    <img class="img-fluid w-100 h-100" src="{{ url_for('static', filename='img/lego.jpeg') }}" style="object-fit: cover;">
+                    <div class="overlay">
+                        <div class="mb-1" style="font-size: 13px;">
+                            <a class="text-white" href="#">Programa</a>
+                            <span class="px-1 text-white">/</span>
+                            <a class="text-white" href="#">Mayo 20, 2024</a>
+                        </div>
+                        <a class="h4 m-0 text-white" href="#">Robótica educativa</a>
+                    </div>
+                </div>
+                <div class="position-relative overflow-hidden" style="height: 300px;">
+                    <img class="img-fluid w-100 h-100" src="{{ url_for('static', filename='img/cooperacion.jpg') }}" style="object-fit: cover;">
+                    <div class="overlay">
+                        <div class="mb-1" style="font-size: 13px;">
+                            <a class="text-white" href="#">Programa</a>
+                            <span class="px-1 text-white">/</span>
+                            <a class="text-white" href="#">Mayo 27, 2024</a>
+                        </div>
+                        <a class="h4 m-0 text-white" href="#">Aprendizaje cooperativo</a>
+                    </div>
+                </div>
+                <div class="position-relative overflow-hidden" style="height: 300px;">
+                    <img class="img-fluid w-100 h-100" src="{{ url_for('static', filename='img/montessori.jpg') }}" style="object-fit: cover;">
+                    <div class="overlay">
+                        <div class="mb-1" style="font-size: 13px;">
+                            <a class="text-white" href="#">Programa</a>
+                            <span class="px-1 text-white">/</span>
+                            <a class="text-white" href="#">Mayo 27, 2024</a>
+                        </div>
+                        <a class="h4 m-0 text-white" href="#">Método Montessori</a>
+                    </div>
+                </div>
+                <div class="position-relative overflow-hidden" style="height: 300px;">
+                    <img class="img-fluid w-100 h-100" src="{{ url_for('static', filename='img/auco.jpg') }}" style="object-fit: cover;">
+                    <div class="overlay">
+                        <div class="mb-1" style="font-size: 13px;">
+                            <a class="text-white" href="#">Programa</a>
+                            <span class="px-1 text-white">/</span>
+                            <a class="text-white" href="#">Mayo 27, 2024</a>
+                        </div>
+                        <a class="h4 m-0 text-white" href="#">Método Aucouturier</a>
+                    </div>
+                </div>
+                <div class="position-relative overflow-hidden" style="height: 300px;">
+                    <img class="img-fluid w-100 h-100" src="{{ url_for('static', filename='img/leer.jpg') }}" style="object-fit: cover;">
+                    <div class="overlay">
+                        <div class="mb-1" style="font-size: 13px;">
+                            <a class="text-white" href="#">Programa</a>
+                            <span class="px-1 text-white">/</span>
+                            <a class="text-white" href="#">Mayo 27, 2024</a>
+                        </div>
+                        <a class="h4 m-0 text-white" href="#">Método Doman</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <!-- MAS NOTICIAS
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 py-3">
+                    <div class="bg-light py-2 px-4 mb-3">
+                        <h3 class="m-0">Business</h3>
+                    </div>
+                    <div class="owl-carousel owl-carousel-3 carousel-item-2 position-relative">
+                        <div class="position-relative">
+                            <img class="img-fluid w-100" src="img/news-500x280-1.jpg" style="object-fit: cover;">
+                            <div class="overlay position-relative bg-light">
+                                <div class="mb-2" style="font-size: 13px;">
+                                    <a href="">Technology</a>
+                                    <span class="px-1">/</span>
+                                    <span>January 01, 2045</span>
+                                </div>
+                                <a class="h4 m-0" href="">Sanctus amet sed ipsum lorem</a>
+                            </div>
+                        </div>
+                        <div class="position-relative">
+                            <img class="img-fluid w-100" src="img/news-500x280-2.jpg" style="object-fit: cover;">
+                            <div class="overlay position-relative bg-light">
+                                <div class="mb-2" style="font-size: 13px;">
+                                    <a href="">Technology</a>
+                                    <span class="px-1">/</span>
+                                    <span>January 01, 2045</span>
+                                </div>
+                                <a class="h4 m-0" href="">Sanctus amet sed ipsum lorem</a>
+                            </div>
+                        </div>
+                        <div class="position-relative">
+                            <img class="img-fluid w-100" src="img/news-500x280-3.jpg" style="object-fit: cover;">
+                            <div class="overlay position-relative bg-light">
+                                <div class="mb-2" style="font-size: 13px;">
+                                    <a href="">Technology</a>
+                                    <span class="px-1">/</span>
+                                    <span>January 01, 2045</span>
+                                </div>
+                                <a class="h4 m-0" href="">Sanctus amet sed ipsum lorem</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 py-3">
+                    <div class="bg-light py-2 px-4 mb-3">
+                        <h3 class="m-0">Technology</h3>
+                    </div>
+                    <div class="owl-carousel owl-carousel-3 carousel-item-2 position-relative">
+                        <div class="position-relative">
+                            <img class="img-fluid w-100" src="img/news-500x280-4.jpg" style="object-fit: cover;">
+                            <div class="overlay position-relative bg-light">
+                                <div class="mb-2" style="font-size: 13px;">
+                                    <a href="">Technology</a>
+                                    <span class="px-1">/</span>
+                                    <span>January 01, 2045</span>
+                                </div>
+                                <a class="h4 m-0" href="">Sanctus amet sed ipsum lorem</a>
+                            </div>
+                        </div>
+                        <div class="position-relative">
+                            <img class="img-fluid w-100" src="img/news-500x280-5.jpg" style="object-fit: cover;">
+                            <div class="overlay position-relative bg-light">
+                                <div class="mb-2" style="font-size: 13px;">
+                                    <a href="">Technology</a>
+                                    <span class="px-1">/</span>
+                                    <span>January 01, 2045</span>
+                                </div>
+                                <a class="h4 m-0" href="">Sanctus amet sed ipsum lorem</a>
+                            </div>
+                        </div>
+                        <div class="position-relative">
+                            <img class="img-fluid w-100" src="img/news-500x280-6.jpg" style="object-fit: cover;">
+                            <div class="overlay position-relative bg-light">
+                                <div class="mb-2" style="font-size: 13px;">
+                                    <a href="">Technology</a>
+                                    <span class="px-1">/</span>
+                                    <span>January 01, 2045</span>
+                                </div>
+                                <a class="h4 m-0" href="">Sanctus amet sed ipsum lorem</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    -->
+
+
+    <!-- Category News Slider Start 
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 py-3">
+                    <div class="bg-light py-2 px-4 mb-3">
+                        <h3 class="m-0">Entertainment</h3>
+                    </div>
+                    <div class="owl-carousel owl-carousel-3 carousel-item-2 position-relative">
+                        <div class="position-relative">
+                            <img class="img-fluid w-100" src="img/news-500x280-6.jpg" style="object-fit: cover;">
+                            <div class="overlay position-relative bg-light">
+                                <div class="mb-2" style="font-size: 13px;">
+                                    <a href="">Technology</a>
+                                    <span class="px-1">/</span>
+                                    <span>January 01, 2045</span>
+                                </div>
+                                <a class="h4 m-0" href="">Sanctus amet sed ipsum lorem</a>
+                            </div>
+                        </div>
+                        <div class="position-relative">
+                            <img class="img-fluid w-100" src="img/news-500x280-5.jpg" style="object-fit: cover;">
+                            <div class="overlay position-relative bg-light">
+                                <div class="mb-2" style="font-size: 13px;">
+                                    <a href="">Technology</a>
+                                    <span class="px-1">/</span>
+                                    <span>January 01, 2045</span>
+                                </div>
+                                <a class="h4 m-0" href="">Sanctus amet sed ipsum lorem</a>
+                            </div>
+                        </div>
+                        <div class="position-relative">
+                            <img class="img-fluid w-100" src="img/news-500x280-4.jpg" style="object-fit: cover;">
+                            <div class="overlay position-relative bg-light">
+                                <div class="mb-2" style="font-size: 13px;">
+                                    <a href="">Technology</a>
+                                    <span class="px-1">/</span>
+                                    <span>January 01, 2045</span>
+                                </div>
+                                <a class="h4 m-0" href="">Sanctus amet sed ipsum lorem</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 py-3">
+                    <div class="bg-light py-2 px-4 mb-3">
+                        <h3 class="m-0">Sports</h3>
+                    </div>
+                    <div class="owl-carousel owl-carousel-3 carousel-item-2 position-relative">
+                        <div class="position-relative">
+                            <img class="img-fluid w-100" src="img/news-500x280-3.jpg" style="object-fit: cover;">
+                            <div class="overlay position-relative bg-light">
+                                <div class="mb-2" style="font-size: 13px;">
+                                    <a href="">Technology</a>
+                                    <span class="px-1">/</span>
+                                    <span>January 01, 2045</span>
+                                </div>
+                                <a class="h4 m-0" href="">Sanctus amet sed ipsum lorem</a>
+                            </div>
+                        </div>
+                        <div class="position-relative">
+                            <img class="img-fluid w-100" src="img/news-500x280-2.jpg" style="object-fit: cover;">
+                            <div class="overlay position-relative bg-light">
+                                <div class="mb-2" style="font-size: 13px;">
+                                    <a href="">Technology</a>
+                                    <span class="px-1">/</span>
+                                    <span>January 01, 2045</span>
+                                </div>
+                                <a class="h4 m-0" href="">Sanctus amet sed ipsum lorem</a>
+                            </div>
+                        </div>
+                        <div class="position-relative">
+                            <img class="img-fluid w-100" src="img/news-500x280-1.jpg" style="object-fit: cover;">
+                            <div class="overlay position-relative bg-light">
+                                <div class="mb-2" style="font-size: 13px;">
+                                    <a href="">Technology</a>
+                                    <span class="px-1">/</span>
+                                    <span>January 01, 2045</span>
+                                </div>
+                                <a class="h4 m-0" href="">Sanctus amet sed ipsum lorem</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+-->
+
+
+                 
+
+                    <!-- Popular News Start 
+                    <div class="pb-3">
+                        <div class="bg-light py-2 px-4 mb-3">
+                            <h3 class="m-0">Tranding</h3>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <img src="img/news-100x100-1.jpg" style="width: 100px; height: 100px; object-fit: cover;">
+                            <div class="w-100 d-flex flex-column justify-content-center bg-light px-3" style="height: 100px;">
+                                <div class="mb-1" style="font-size: 13px;">
+                                    <a href="">Technology</a>
+                                    <span class="px-1">/</span>
+                                    <span>January 01, 2045</span>
+                                </div>
+                                <a class="h6 m-0" href="">Lorem ipsum dolor sit amet consec adipis elit</a>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <img src="img/news-100x100-2.jpg" style="width: 100px; height: 100px; object-fit: cover;">
+                            <div class="w-100 d-flex flex-column justify-content-center bg-light px-3" style="height: 100px;">
+                                <div class="mb-1" style="font-size: 13px;">
+                                    <a href="">Technology</a>
+                                    <span class="px-1">/</span>
+                                    <span>January 01, 2045</span>
+                                </div>
+                                <a class="h6 m-0" href="">Lorem ipsum dolor sit amet consec adipis elit</a>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <img src="img/news-100x100-3.jpg" style="width: 100px; height: 100px; object-fit: cover;">
+                            <div class="w-100 d-flex flex-column justify-content-center bg-light px-3" style="height: 100px;">
+                                <div class="mb-1" style="font-size: 13px;">
+                                    <a href="">Technology</a>
+                                    <span class="px-1">/</span>
+                                    <span>January 01, 2045</span>
+                                </div>
+                                <a class="h6 m-0" href="">Lorem ipsum dolor sit amet consec adipis elit</a>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <img src="img/news-100x100-4.jpg" style="width: 100px; height: 100px; object-fit: cover;">
+                            <div class="w-100 d-flex flex-column justify-content-center bg-light px-3" style="height: 100px;">
+                                <div class="mb-1" style="font-size: 13px;">
+                                    <a href="">Technology</a>
+                                    <span class="px-1">/</span>
+                                    <span>January 01, 2045</span>
+                                </div>
+                                <a class="h6 m-0" href="">Lorem ipsum dolor sit amet consec adipis elit</a>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <img src="img/news-100x100-5.jpg" style="width: 100px; height: 100px; object-fit: cover;">
+                            <div class="w-100 d-flex flex-column justify-content-center bg-light px-3" style="height: 100px;">
+                                <div class="mb-1" style="font-size: 13px;">
+                                    <a href="">Technology</a>
+                                    <span class="px-1">/</span>
+                                    <span>January 01, 2045</span>
+                                </div>
+                                <a class="h6 m-0" href="">Lorem ipsum dolor sit amet consec adipis elit</a>
+                            </div>
+                        </div>
+                    </div>
+                  Popular News End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- News With Sidebar End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-light pt-5 px-sm-3 px-md-5">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <a href="index.html" class="navbar-brand">
+                    <h1 class="mb-2 mt-n2 display-5 text-uppercase"><span class="text-primary">Piaget</span> & Rogers</h1>
+                </a>
+                <p>El dinero no tiene que ser un objetivo, Debe ser una consecuencia</p>
+                <div class="d-flex justify-content-start mt-4">
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="font-weight-bold mb-4"></h4>
+                <div class="d-flex flex-wrap m-n1">
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="font-weight-bold mb-4"></h4>
+                <div class="d-flex flex-wrap m-n1">
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="container-fluid py-4 px-sm-3 px-md-5">
+        <p class="m-0 text-center">
+            &copy; <a class="font-weight-bold" href="#">Your Site Name</a>. All Rights Reserved. 
+			
+			<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+			Designed by <a class="font-weight-bold" href="https://htmlcodex.com">HTML Codex</a>
+        </p>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-dark back-to-top"><i class="fa fa-angle-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="{{ url_for('static', filename='lib/owlcarousel/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+
+</html>
